@@ -1,0 +1,9 @@
+data/
+__pycache__/
+*.sqlite*
+*.db
+*.db-*
+*.jsonl
+*.csv
+*.tsv
+.DS_Store
