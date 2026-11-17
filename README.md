@@ -43,8 +43,6 @@ Collection data is created locally when you run the monitor. The database and ge
 - Each successful work unit commits independently. A missing Lookup result is retried after a day. Temporary network failures are deferred and a 429 persists the task retry and the global pause together according to Retry-After, with a five-minute fallback. Requests already in flight can finish during the pause.
 - Coverage follows the regional entries Apple exposes in this sitemap. The saved region list accumulates observations and can include regions from earlier scans. Prices, ratings and descriptions belong to the selected region. First discovery time and Apple's release date are separate fields. When Apple omits a per-app modification date, edits under an unchanged URL can go undetected.
 
-Existing US-only databases upgrade automatically on the next monitor run. Collected records stay intact. Sitemap cache validators are reset once to discover other regions.
-
 ## Export
 
 ```sh
