@@ -1,6 +1,27 @@
 # App Store Radar
 
-A small Python monitor for apps across App Store regions. It follows Apple's [new-app sitemap index](https://apps.apple.com/sitemaps_apps_index_new-app_1.xml), discovers app IDs and gradually fills a local SQLite database with Apple Lookup metadata.
+Discover new App Store apps across regions and collect their metadata into a local database. Collection resumes between runs, checks for new apps every three hours, and exports to JSONL. Requires Python 3.9 or later and uses the standard library.
+
+## Run with your agent
+
+Copy the following prompt into your coding agent.
+
+```text
+Set up and run App Store Radar from https://github.com/ivanpasynkov/appstore-radar.
+
+Clone the repository, or use an existing checkout, and read its README.
+Use Python 3.9 or later to run python3 monitor_app_store.py from the repository directory.
+The script uses the Python standard library and creates its database at data/apps.sqlite3.
+
+Start the monitor in the background with logs saved to data/monitor.log.
+If a monitor is already running for this database, use that process.
+Verify that the process stays running, check the logs for errors, and inspect the database
+for initial progress. Collection is gradual, so report the current state while it continues.
+
+Tell me where the checkout, database and log are, how to stop the process, and how to
+resume collection. When I ask for an export, run python3 monitor_app_store.py export
+and save its output to apps.jsonl in the checkout.
+```
 
 ## Run
 
